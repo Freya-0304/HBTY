@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小羊老师向前冲 · 生日</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&family=Ma+Shan+Zheng&family=Gaegu:wght@400;700&family=Caveat:wght@400;600&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main id="app">
+
+  <!-- ============ 0 封面 ============ -->
+  <section class="screen screen--cover is-active" data-screen="cover">
+    <div class="cover__bg"></div>
+    <div class="cover__inner">
+      <p class="cover__en cover__en--top">Capture your own light and shadow,<br>tell stories.</p>
+      <h1 class="cover__title">小羊老师向前冲</h1>
+      <p class="cover__cn">演绎你自己的电影 讲述你的故事</p>
+      <p class="cover__en cover__en--bottom">Just do it and you can achieve<br>everything !</p>
+      <button class="btn btn--paper" data-next>开始挑战</button>
+    </div>
+  </section>
+
+  <!-- ============ 1 档案确认 ============ -->
+  <section class="screen screen--profile" data-screen="profile">
+    <p class="screen__kicker">Frame the moment. Keep it forever.</p>
+    <h2 class="screen__title">档案确认</h2>
+    <div class="profile__card">
+      <div class="profile__row"><span class="profile__label">姓    名：</span><span class="profile__value" data-field="name">小羊老师</span><button class="profile__edit" data-edit="name">修改</button></div>
+      <div class="profile__row"><span class="profile__label">年    龄：</span><span class="profile__value" data-field="age">22</span><button class="profile__edit" data-edit="age">修改</button></div>
+      <div class="profile__row"><span class="profile__label">星    座：</span><span class="profile__value" data-field="constellation">天秤座</span><button class="profile__edit" data-edit="constellation">修改</button></div>
+      <div class="profile__row"><span class="profile__label">m b t i :</span><span class="profile__value" data-field="mbti">INFJ</span><button class="profile__edit" data-edit="mbti">修改</button></div>
+      <div class="profile__row"><span class="profile__label">座右铭：</span><span class="profile__value" data-field="motto">走自己的路</span><button class="profile__edit" data-edit="motto">修改</button></div>
+    </div>
+    <p class="profile__foot">Life through a lens. Shot with heart.</p>
+    <button class="btn btn--paper" data-next>确    认</button>
+  </section>
+
+  <!-- ============ 2 第一关 标题 ============ -->
+  <section class="screen screen--title screen--title-l1" data-screen="l1-title">
+    <p class="screen__level">第一关</p>
+    <h2 class="screen__motto">去往你的天空  无论多遥远</h2>
+    <button class="btn btn--glass" data-next>启  程</button>
+  </section>
+
+  <!-- ============ 3 第一关 故事1 ============ -->
+  <section class="screen screen--story" data-screen="l1-story1">
+    <div class="story__head"><span class="story__tag">走出小城</span></div>
+    <div class="story__body">
+      <div class="letter" data-fade>
+        <p>2004年秋，你出生了。在一个小县城。</p>
+        <p>那一年，蝉鸣阵阵，溪水潺潺，你的小城与世隔绝。</p>
+        <p>那时的你，对于所谓的“世界”并不好奇，你很幸福，爸爸妈妈在身边，平平淡淡地上学、玩耍。</p>
+        <p>你慢慢地长大，接触了很多以前不曾知道的知识。</p>
+        <p>小学、初中、高中……</p>
+        <p>在日益复杂的世界里，你似乎发现，一切都无法平平淡淡，你要为自己争取，</p>
+        <p class="letter__em">争取！</p>
+        <p class="letter__em">走出这座小城！</p>
+      </div>
+      <div class="story__photos">
+        <img src="assets/photo1.jpg" alt="">
+      </div>
+    </div>
+    <button class="btn btn--paper" data-next>开始努力！</button>
+  </section>
+
+  <!-- ============ 4 第一关 游戏·学习提分 ============ -->
+  <section class="screen screen--game" data-screen="l1-game">
+    <div class="story__head"><span class="story__tag">走出小城</span></div>
+    <h3 class="game__title">学习提分 · 冲刺高考</h3>
+    <p class="game__hint">点击【学习提分】刷分，总分达到 <b>380 / 450</b> 即可参加高考</p>
+    <div class="study">
+      <div class="study__card" data-subject="0">
+        <div class="study__name">语文</div>
+        <div class="study__score"><span class="study__num">80</span>/150</div>
+        <button class="btn btn--study" data-study>学习提分</button>
+      </div>
+      <div class="study__card" data-subject="1">
+        <div class="study__name">数学</div>
+        <div class="study__score"><span class="study__num">80</span>/150</div>
+        <button class="btn btn--study" data-study>学习提分</button>
+      </div>
+      <div class="study__card" data-subject="2">
+        <div class="study__name">英语</div>
+        <div class="study__score"><span class="study__num">80</span>/150</div>
+        <button class="btn btn--study" data-study>学习提分</button>
+      </div>
+    </div>
+    <div class="study__total">
+      <div class="study__totalbar"><div class="study__totalfill" id="studyFill"></div></div>
+      <span class="study__totalnum" id="studyTotal">240 / 450</span>
+    </div>
+    <button class="btn btn--paper" data-next>走出小城</button>
+  </section>
+
+  <!-- ============ 5 第一关 成就 ============ -->
+  <section class="screen screen--achieve screen--achieve-l1" data-screen="l1-achieve">
+    <canvas class="fireworks" id="fireworks"></canvas>
+    <div class="sparkles" aria-hidden="true">
+      <span class="spk spk-1">✨</span>
+      <span class="spk spk-2">🎉</span>
+      <span class="spk spk-3">✨</span>
+      <span class="spk spk-4">🎊</span>
+      <span class="spk spk-5">✨</span>
+    </div>
+    <div class="achieve__wrap">
+      <p class="achieve__lead">欢迎来到</p>
+      <h2 class="achieve__big">中山大学！</h2>
+      <div class="admission">
+        <div class="admission__band">录 取 通 知 书</div>
+        <div class="admission__inner">
+          <p class="admission__uni">中山大学</p>
+          <p class="admission__en">SUN YAT-SEN UNIVERSITY</p>
+          <p class="admission__line"></p>
+          <p class="admission__to">小羊老师 同学：</p>
+          <p class="admission__text">恭喜你凭借厚积薄发，从万千人中脱颖而出，<br>已被我校正式录取。新的世界，欢迎你的到来！</p>
+          <div class="admission__seal"><span>录</span><span>取</span></div>
+        </div>
+      </div>
+      <p class="achieve__sub">恭喜恭喜！解锁新的人生呀！</p>
+      <button class="btn btn--paper" data-next>继 续</button>
+    </div>
+  </section>
+
+  <!-- ============ 6 第一关 故事2 ============ -->
+  <section class="screen screen--story" data-screen="l1-story2">
+    <div class="story__head"><span class="story__tag">走出小城</span></div>
+    <div class="story__body">
+      <div class="letter" data-fade>
+        <p>命运似乎一直很眷顾你，在生命的关键时刻，你总能爆发出巨大的潜能。</p>
+        <p>或许也不仅仅是因为命运，更是因为你自己的厚积薄发。</p>
+        <p>从不把人生的下一刻交给虚无缥缈的运气来决定，所以它总是以浪漫的方式回馈你。</p>
+        <p>不算很好，你想，但是不是很差。</p>
+        <p>一个新的城市，意味着新的机会，新的理想，新的改变。</p>
+        <p>这一次，再也没有普适的规则，也不会有世俗意义上的定义。</p>
+        <p>你想成为什么样的自己，就去成为什么样的自己。</p>
+        <p class="letter__em">矗立天地间，你是你自己。</p>
+        <p>很好！让我们开启新的副本吧！</p>
+      </div>
+      <div class="story__photos">
+        <img src="assets/photo2.jpg" alt="">
+      </div>
+    </div>
+    <button class="btn btn--paper" data-next>很好！</button>
+  </section>
+
+  <!-- ============ 7 第一关 弹窗·成就 ============ -->
+  <section class="screen screen--achievement" data-screen="l1-done">
+    <div class="achv__card">
+      <p class="achv__label">第一关达成成就：</p>
+      <h2 class="achv__name">NICE!我的新世界！</h2>
+      <p class="achv__q">是否前往下一关？</p>
+      <button class="btn btn--paper" data-next>继续战斗！</button>
+    </div>
+  </section>
+
+  <!-- ============ 8 第二关 标题 ============ -->
+  <section class="screen screen--title screen--title-l2" data-screen="l2-title">
+    <p class="screen__level">第二关</p>
+    <h2 class="screen__motto">在海洋中拥抱 见天地辽阔</h2>
+    <button class="btn btn--glass" data-next>启  程</button>
+  </section>
+
+  <!-- ============ 9 第二关 故事1 ============ -->
+  <section class="screen screen--story" data-screen="l2-story1">
+    <div class="story__head"><span class="story__tag">拥抱天地</span></div>
+    <div class="story__body">
+      <div class="letter" data-fade>
+        <p>一切都是未知的。</p>
+        <p>未知的同伴，未知的课程，未知的旅途。</p>
+        <p>你似乎磕磕绊绊的，也不知道怎样才好。</p>
+        <p>太迷茫了，谁能来告诉你，未来一词到底在哪里。</p>
+        <p>是否还需要按部就班？是否还需要随波逐流？</p>
+        <p>没人知道，也没有人告知，更不会有一条捷径，让你走在最正确的路上。</p>
+        <p>那就去大胆尝试吧，在生命最精彩的几年。</p>
+        <p>新鲜的同伴，新鲜的课程，新鲜的旅途。</p>
+        <p class="letter__em">一切都会是最好的安排。</p>
+      </div>
+      <div class="story__photos">
+        <img src="assets/photo3.jpg" alt="">
+        <img src="assets/photo4.jpg" alt="">
+      </div>
+    </div>
+    <button class="btn btn--paper" data-next>新的尝试！</button>
+  </section>
+
+  <!-- ============ 10 第二关 游戏·猜单词 ============ -->
+  <section class="screen screen--game screen--game-quiz" data-screen="l2-game">
+    <div class="story__head"><span class="story__tag">拥抱天地</span></div>
+    <p class="game__recall">还记得？</p>
+    <div class="quiz">
+      <div class="quiz__word" id="quizWord">최상의</div>
+      <div class="quiz__options" id="quizOptions"></div>
+      <p class="quiz__progress" id="quizProgress">1 / 8</p>
+    </div>
+    <button class="btn btn--paper is-hidden" data-next id="quizDone">填好啦</button>
+  </section>
+
+  <!-- ============ 11 第二关 韩语揭示 ============ -->
+  <section class="screen screen--korean" data-screen="l2-korean">
+    <div class="story__head"><span class="story__tag">拥抱天地</span></div>
+    <p class="korean__line">고향을 그리워할 필요 없이, 멋진 미래로 나아가자.</p>
+    <p class="korean__line">성장의 자신을 포옹하고 최고의 여정을 믿자.</p>
+    <p class="korean__trans">不必思念故乡，向着精彩的未来前进吧。<br>拥抱成长的自己，相信最好的旅程。</p>
+    <button class="btn btn--paper" data-next>拥抱天地</button>
+  </section>
+
+  <!-- ============ 12 第二关 故事2 ============ -->
+  <section class="screen screen--story" data-screen="l2-story2">
+    <div class="story__head"><span class="story__tag">拥抱天地</span></div>
+    <div class="story__body">
+      <div class="letter" data-fade>
+        <p>在大学，你一个人学会了在广州生活，一个人独自前往韩国交换。</p>
+        <p>一个人做了很多事情，似乎孤独，但又似乎很幸福。</p>
+        <p>因为人生，终于是属于你自己的了，不是吗？</p>
+        <p>你走过广州塔，去过珠江边，在首尔欣赏冬雪，去釜山亲吻大海。</p>
+        <p>流连忘返济州岛。</p>
+        <p>世界之大，终于是你所见证过的了，不是吗？</p>
+        <p>那些试错、那些难过、那些不足为外人道的挣扎与痛苦。</p>
+        <p>在往返千里的路程中，变成了勇敢前行的经验与底气。</p>
+        <p>好了，不该回首了，你想。</p>
+        <p class="letter__em">要继续往前走了。</p>
+      </div>
+      <div class="story__photos">
+        <img src="assets/photo5.jpg" alt="">
+      </div>
+    </div>
+    <button class="btn btn--paper" data-next>拥抱天地</button>
+  </section>
+
+  <!-- ============ 13 第二关 弹窗·成就 ============ -->
+  <section class="screen screen--achievement" data-screen="l2-done">
+    <div class="achv__card">
+      <p class="achv__label">第二关达成成就：</p>
+      <h2 class="achv__name">PERFECT!成为我自己！</h2>
+      <p class="achv__q">是否前往下一关？</p>
+      <button class="btn btn--paper" data-next>继续战斗！</button>
+    </div>
+  </section>
+
+  <!-- ============ 14 第三关 标题 ============ -->
+  <section class="screen screen--title screen--title-l3" data-screen="l3-title">
+    <p class="screen__level">第三关</p>
+    <h2 class="screen__motto">人生不是轨道 是旷野</h2>
+    <button class="btn btn--glass" data-next>启  程</button>
+  </section>
+
+  <!-- ============ 15 第三关 故事1 ============ -->
+  <section class="screen screen--story" data-screen="l3-story1">
+    <div class="story__head"><span class="story__tag">属于你的路</span></div>
+    <div class="story__body story__body--center">
+      <div class="letter letter--center" data-fade>
+        <p>三年真的好快呀，一瞬间，又到选择路口了。</p>
+        <p>你看着纷繁的信息，不知该如何抉择。</p>
+        <p>在众人口中，似乎只有继续读书才是最上乘的选择。</p>
+        <p>在众人口中，似乎只有考公选调才有最安稳的保障。</p>
+        <p>在危机四伏的年代里，大家似乎默契地探索出一条稳定的路。</p>
+        <p>走上这条路，家人开始、朋友称赞，万事如意。</p>
+        <p class="letter__em">真的是这样吗？</p>
+        <p class="letter__em">你该相信吗？</p>
+      </div>
+    </div>
+    <button class="btn btn--paper" data-next>我的抉择！</button>
+  </section>
+
+  <!-- ============ 16 第三关 游戏·岔路口 ============ -->
+  <section class="screen screen--game screen--game-fork" data-screen="l3-game">
+    <div class="story__head"><span class="story__tag">属于你的路</span></div>
+    <div class="fork" id="forkBox">
+      <p class="fork__q" id="forkQ">读研深造，还是早早就业？</p>
+      <div class="fork__btns" id="forkBtns"></div>
+      <p class="fork__reply" id="forkReply"></p>
+    </div>
+  </section>
+
+  <!-- ============ 17 第三关 诗·英文 ============ -->
+  <section class="screen screen--poem" data-screen="l3-poem-en">
+    <div class="story__head"><span class="story__tag">属于你的路</span></div>
+    <div class="poem-page">
+      <img class="poem-page__img" src="assets/photo6.jpg" alt="">
+      <div class="poem-page__text">
+        <h3 class="poem-page__title">The Road Not Taken</h3>
+        <div class="poem-page__cols">
+          <div class="poem-col" data-fade>
+            <p>Two roads diverged in a yellow wood,<br>And sorry I could not travel both<br>And be one traveler, long I stood<br>And looked down one as far as I could<br>To where it bent in the undergrowth.</p>
+            <p>Then took the other, as just as fair,<br>And having perhaps the better claim,<br>Because it was grassy and wanted wear;<br>Though as for that the passing there<br>Had worn them really about the same.</p>
+          </div>
+          <div class="poem-col" data-fade>
+            <p>And both that morning equally lay<br>In leaves no step had trodden black.<br>Oh, I kept the first for another day!<br>Yet knowing how way leads on to way,<br>I doubted if I should ever come back.</p>
+            <p>I shall be telling this with a sigh<br>Somewhere ages and ages hence:<br>Two roads diverged in a wood, and I--<br>I took the one less traveled by,<br>And that has made all the difference.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn--paper" data-next>继续</button>
+  </section>
+
+  <!-- ============ 18 第三关 诗·中文 ============ -->
+  <section class="screen screen--poem" data-screen="l3-poem-cn">
+    <div class="story__head"><span class="story__tag">属于你的路</span></div>
+    <div class="poem-page">
+      <img class="poem-page__img" src="assets/photo7.jpg" alt="">
+      <div class="poem-page__text">
+        <h3 class="poem-page__title">未选择的路</h3>
+        <div class="poem-page__cols">
+          <div class="poem-col" data-fade>
+            <p>黄色的树林里分出两条路，<br>可惜我不能同时去涉足，<br>我在那路口久久伫立，<br>我向着一条路极目望去，<br>直到它消失在丛林深处。</p>
+            <p>但我却选了另外一条路，<br>它荒草萋萋，十分幽寂，<br>显得更诱人、更美丽，<br>虽然在这条小路上，<br>都很少留下旅人的足迹。</p>
+          </div>
+          <div class="poem-col" data-fade>
+            <p>虽然那天清晨落叶满地，<br>两条路都未经脚印污染。<br>啊，留下一条路等改日再见！<br>但我知道路径延绵无尽头，<br>恐怕我难以再回返。</p>
+            <p>也许多少年后在某个地方，<br>我将轻声叹息把往事回顾，<br>一片树林里分出两条路，<br>而我选了人迹更少的一条，<br>从此决定我一生的道路。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn--paper" data-next>继续</button>
+  </section>
+
+  <!-- ============ 18 第三关 弹窗 ============ -->
+  <section class="screen screen--achievement" data-screen="l3-confirm">
+    <div class="achv__card">
+      <p class="achv__label">宿主是否正式开启</p>
+      <h2 class="achv__name">第三关的挑战？</h2>
+      <button class="btn btn--paper" data-next>与世界交手</button>
+    </div>
+  </section>
+
+  <!-- ============ 19 生日祝福 ============ -->
+  <section class="screen screen--final" data-screen="final">
+    <div class="final__inner">
+      <h2 class="final__hi">生日快乐！<span class="final__emoji">^^</span></h2>
+      <p class="final__joke">为了一碟醋报了一盘饺子</p>
+      <div class="letter letter--final" data-fade>
+        <p>其实想送给你的，就是《未选择的路》这首诗。</p>
+        <p>或许在这个时间节点，你选择了人迹更少的那条路。</p>
+        <p>我不知道你是否会有一些负面的情绪，比如自我质疑、自我埋怨、迷茫、恐惧？</p>
+        <p>尤其是前一段时间保研截图刷屏朋友圈的时候。</p>
+        <p>但我想说，你选择的这条路，未必不好。</p>
+        <p>在一个大家尚需父母供养的年纪，依靠自己在异地大城市生活、奔忙，</p>
+        <p>这本来就是一个非常了不起的决定、了不起的成就。</p>
+        <p>生命不求大富大贵，不求跨越阶级。只求一生顺遂、平安喜乐。</p>
+        <p class="letter__em">祝你，在二十二岁这一年，一切顺利。</p>
+        <p>吃过很多苦，流过很多泪，但最终都结出不错的果子。</p>
+        <p class="letter__em">成为生命浪漫的基石。</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 弹窗：高考 -->
+<div class="modal" id="modalExam">
+  <div class="modal__card">
+    <p class="modal__title">检测到宿主已经准备就绪，是否参加高考？</p>
+    <p class="modal__sub">仅此一次机会！</p>
+    <button class="btn btn--paper" data-close>我准备好了</button>
+  </div>
+</div>
+
+<!-- 弹窗：第一关成就 -->
+<div class="modal" id="modalL1">
+  <div class="modal__card">
+    <p class="modal__title">第一关达成成就：</p>
+    <p class="modal__big">NICE!我的新世界！</p>
+    <p class="modal__sub">是否前往下一关？</p>
+    <button class="btn btn--paper" data-close>继续战斗！</button>
+  </div>
+</div>
+
+<!-- 弹窗：第二关成就 -->
+<div class="modal" id="modalL2">
+  <div class="modal__card">
+    <p class="modal__title">第二关达成成就：</p>
+    <p class="modal__big">PERFECT!成为我自己！</p>
+    <p class="modal__sub">是否前往下一关？</p>
+    <button class="btn btn--paper" data-close>继续战斗！</button>
+  </div>
+</div>
+
+<!-- 弹窗：第三关挑战 -->
+<div class="modal" id="modalL3">
+  <div class="modal__card">
+    <p class="modal__title">宿主是否正式开启</p>
+    <p class="modal__big">第三关的挑战？</p>
+    <button class="btn btn--paper" data-close>与世界交手</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
